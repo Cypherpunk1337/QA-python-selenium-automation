@@ -7,6 +7,7 @@ import time
 
 class FormPage(BasePage):
     def fill_fields_and_submit(self):
+        picture_path = (r'C:\Users\0xFFFFFFFF\Downloads\5fz_MWLq6Xo_11zon.jpg')
         person = generate_person()
         self.remove_footer()
         self.element_is_visible(Locators.FIRST_NAME).send_keys(person.first_name)
@@ -18,6 +19,15 @@ class FormPage(BasePage):
         subject.send_keys(person.subject)
         subject.send_keys(Keys.RETURN)
         self.element_is_visible(Locators.HOBBIES).click()
-        #self.element_is_visible(Locators.PICTURE).send_keys(r'path')
+        self.element_is_visible(Locators.PICTURE).send_keys(picture_path)
         self.element_is_visible(Locators.CURRENT_ADDRESS).send_keys(person.current_address)
         self.element_is_visible(Locators.SUBMIT).click()
+        self.element_is_visible(Locators.RESULT_TABLE)
+        return person
+    
+    def form_result(self):
+        result_list = self.elements_are_visible(Locators.RESULT_TABLE)
+
+        results_text = [i.text for i in result_list]
+
+        return results_text
