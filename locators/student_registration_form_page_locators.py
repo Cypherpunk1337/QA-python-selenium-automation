@@ -11,8 +11,8 @@ class FormPageLocators:
     HOBBIES = (By.CSS_SELECTOR, f'label[for="hobbies-checkbox-{randint(1,3)}"' )
     PICTURE = (By.CSS_SELECTOR, '#uploadPicture')
     CURRENT_ADDRESS = (By.CSS_SELECTOR, '#currentAddress')
+    STATE = (By.CSS_SELECTOR, '#react-select-3-input')
+    CITY = (By.CSS_SELECTOR, '#react-select-4-input')
     SUBMIT = (By.CSS_SELECTOR, '#submit')
-    STATE = (By.CSS_SELECTOR, '#state')
-    CITY = (By.CSS_SELECTOR, '#city')
 
     RESULT_TABLE = (By.XPATH, '//div[@class="table-responsive"]//td[2]')

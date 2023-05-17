@@ -14,3 +14,4 @@ class TestFormPage:
         assert person.current_address == result[8], 'Result Address is not equal to input data'
         assert person.mobile == result[3], 'Result Mobile is not equal to input data'
         assert person.subject == result[5], 'Result Subject is not equal to input data'
+        assert f'{person.state} {person.city}' == result[9], 'Result State and City are not equal to input data'

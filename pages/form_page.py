@@ -1,6 +1,6 @@
 from generator.generator import generate_person
 from pages.base_page import BasePage
-from locators.form_page_locators import FormPageLocators as Locators
+from locators.student_registration_form_page_locators import FormPageLocators as Locators
 from selenium.webdriver.common.keys import Keys
 import time
 
@@ -21,6 +21,12 @@ class FormPage(BasePage):
         self.element_is_visible(Locators.HOBBIES).click()
         self.element_is_visible(Locators.PICTURE).send_keys(picture_path)
         self.element_is_visible(Locators.CURRENT_ADDRESS).send_keys(person.current_address)
+        state = self.element_is_visible(Locators.STATE)
+        state.send_keys(person.state)
+        state.send_keys(Keys.RETURN)
+        city = self.element_is_visible(Locators.CITY)
+        city.send_keys(person.city)
+        city.send_keys(Keys.RETURN)
         self.element_is_visible(Locators.SUBMIT).click()
         self.element_is_visible(Locators.RESULT_TABLE)
         return person
