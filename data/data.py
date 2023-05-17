@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from random import randint
 
 
 @dataclass
@@ -9,3 +10,4 @@ class Person:
         current_address: str = None
         mobile: str = None
         subject: str = None
+        gender: int = None

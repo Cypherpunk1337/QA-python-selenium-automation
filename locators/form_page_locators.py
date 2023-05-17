@@ -12,5 +12,7 @@ class FormPageLocators:
     PICTURE = (By.CSS_SELECTOR, '#uploadPicture')
     CURRENT_ADDRESS = (By.CSS_SELECTOR, '#currentAddress')
     SUBMIT = (By.CSS_SELECTOR, '#submit')
+    STATE = (By.CSS_SELECTOR, '#state')
+    CITY = (By.CSS_SELECTOR, '#city')
 
     RESULT_TABLE = (By.XPATH, '//div[@class="table-responsive"]//td[2]')
