@@ -1,4 +1,4 @@
-from pages.form_page import FormPage
+from pages.student_registration_form_page import FormPage
 
 
 class TestFormPage:
