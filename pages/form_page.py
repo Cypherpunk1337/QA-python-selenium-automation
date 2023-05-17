@@ -16,7 +16,6 @@ class FormPage(BasePage):
         self.element_is_visible(Locators.MOBILE).send_keys(person.mobile)
         subject = self.element_is_visible(Locators.SUBJECTS)
         subject.send_keys(person.subject)
-        time.sleep(5)
         subject.send_keys(Keys.RETURN)
         self.element_is_visible(Locators.HOBBIES).click()
         #self.element_is_visible(Locators.PICTURE).send_keys(r'path')
