@@ -19,6 +19,6 @@ class FormPage(BasePage):
         time.sleep(5)
         subject.send_keys(Keys.RETURN)
         self.element_is_visible(Locators.HOBBIES).click()
-        self.element_is_visible(Locators.PICTURE).send_keys(r'C:\Users\0xFFFFFFFF\Downloads\5fz_MWLq6Xo_11zon.jpg')
+        #self.element_is_visible(Locators.PICTURE).send_keys(r'path')
         self.element_is_visible(Locators.CURRENT_ADDRESS).send_keys(person.current_address)
         self.element_is_visible(Locators.SUBMIT).click()
